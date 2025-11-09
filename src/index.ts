@@ -93,7 +93,7 @@ export default {
   // and can create/get instances of it.
   // The class name must match the class_name in wrangler.jsonc
   ChatRoomDO: ChatRoomDO,
-} satisfies ExportedHandler<Env>;
+};
 
 /**
  * Handles AI chat API requests
