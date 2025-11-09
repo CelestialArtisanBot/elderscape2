@@ -27,7 +27,7 @@
   "kv_namespaces": [
     {
       "binding": "ELDERSCAPE_KV",
-      "namespace_id": "bb15db5a0436465381e057bcbdabf873"
+      "id": "bb15db5a0436465381e057bcbdabf873"
     }
   ],
   "durable_objects": {
@@ -38,5 +38,13 @@
       }
     ]
   },
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_classes": [
+        "ChatRoomDO"
+      ]
+    }
+  ],
   "upload_source_maps": true
 }
