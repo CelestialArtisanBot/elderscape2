@@ -25,7 +25,10 @@
     }
   ],
   "kv_namespaces": [
-    "bb15db5a0436465381e057bcbdabf873"
+    {
+      "binding": "ELDERSCAPE_KV",
+      "id": "bb15db5a0436465381e057bcbdabf873"
+    }
   ],
   "durable_objects": {
     "bindings": [
