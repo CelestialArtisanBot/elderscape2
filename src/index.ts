@@ -7,11 +7,7 @@
  *
  * @license MIT
  */
-import { Env, ChatMessage, WebSocketMessage } from "./types";
-import { Retries } from "durable-utils";
-import { ChatRoomDO } from "./chat_room_do"; // Import the Durable Object class
-
-export { ChatRoomDO } from "./chat_room_do"; // Explicit re-export for Wrangler
+import { Env, ChatMessage } from "./types";
 
 // Model ID for Workers AI model
 // https://developers.cloudflare.com/workers-ai/models/
@@ -61,11 +57,6 @@ export default {
             return handlePlayerStatsRequest(req, dbSession);
           } else if (url.pathname.startsWith("/api/settings")) { // KV settings
             return handleSettingsRequest(req, env);
-          } else if (url.pathname === "/api/game_chat_ws") {
-            // Handle WebSocket upgrade for game chat
-            const id = env.CHAT_ROOM.idFromName("global-game-chat"); // A single global chat room
-            const stub = env.CHAT_ROOM.get(id);
-            return stub.fetch(request);
           }
 
           // Handle 404 for unmatched API routes
@@ -94,7 +85,6 @@ export default {
   // This is how the Worker knows about the Durable Object class
   // and can create/get instances of it.
   // The class name must match the class_name in wrangler.jsonc
-  ChatRoomDO: ChatRoomDO,
 };
 
 /**
