@@ -11,6 +11,8 @@ import { Env, ChatMessage, WebSocketMessage } from "./types";
 import { Retries } from "durable-utils";
 import { ChatRoomDO } from "./chat_room_do"; // Import the Durable Object class
 
+export { ChatRoomDO } from "./chat_room_do"; // Explicit re-export for Wrangler
+
 // Model ID for Workers AI model
 // https://developers.cloudflare.com/workers-ai/models/
 const MODEL_ID = "@cf/mistral/mistral-7b-instruct-v0.2";
