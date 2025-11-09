@@ -17,5 +17,26 @@
   "ai": {
     "binding": "AI"
   },
+  "d1_databases": [
+    {
+      "binding": "ELDERSCAPE_DB",
+      "database_name": "elderscape_db",
+      "database_id": "d5aaaaaf-67a6-4aec-b319-c45568e17a38"
+    }
+  ],
+  "kv_namespaces": [
+    {
+      "binding": "ELDERSCAPE_KV",
+      "namespace_id": "bb15db5a0436465381e057bcbdabf873"
+    }
+  ],
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "CHAT_ROOM",
+        "class_name": "ChatRoomDO"
+      }
+    ]
+  },
   "upload_source_maps": true
 }
